@@ -1,0 +1,50 @@
+{
+  "table_name": "hackathon_ideas",
+  "columns": [
+    {"name": "idea_id", "type": "VARCHAR(50)", "constraints": "PRIMARY KEY"},
+    {"name": "idea_title", "type": "TEXT"},
+    {"name": "brief_summary", "type": "TEXT"},
+    {"name": "challenge_opportunity", "type": "TEXT"},
+    {"name": "novelty_benefits_risks", "type": "TEXT"},
+    {"name": "responsible_ai", "type": "TEXT"},
+    {"name": "additional_file_types", "type": "TEXT"},
+    {"name": "second_file", "type": "TEXT"},
+    {"name": "preferred_week", "type": "VARCHAR(100)"},
+    {"name": "build_preference", "type": "VARCHAR(200)"},
+    {"name": "build_approach", "type": "VARCHAR(200)"},
+    {"name": "code_preference", "type": "VARCHAR(200)"},
+    
+    {"name": "extracted_files_content", "type": "TEXT"},
+    {"name": "files_processed", "type": "INTEGER", "default": "0"},
+    {"name": "content_type", "type": "VARCHAR(20)"},
+    {"name": "extraction_status", "type": "VARCHAR(50)", "default": "'pending'"},
+    
+    {"name": "primary_theme", "type": "VARCHAR(200)"},
+    {"name": "secondary_themes", "type": "TEXT"},
+    {"name": "theme_confidence", "type": "FLOAT"},
+    {"name": "theme_rationale", "type": "TEXT"},
+    
+    {"name": "industry_name", "type": "VARCHAR(200)"},
+    {"name": "industry_confidence", "type": "FLOAT"},
+    {"name": "industry_rationale", "type": "TEXT"},
+    
+    {"name": "technologies_extracted", "type": "TEXT"},
+    {"name": "technology_rationale", "type": "TEXT"},
+    
+    {"name": "classification_status", "type": "VARCHAR(50)", "default": "'pending'"},
+    
+    {"name": "evaluation_scores", "type": "JSONB"},
+    {"name": "weighted_total_score", "type": "FLOAT"},
+    {"name": "investment_recommendation", "type": "VARCHAR(50)"},
+    {"name": "key_strengths", "type": "TEXT"},
+    {"name": "key_concerns", "type": "TEXT"},
+    {"name": "assumptions_made", "type": "TEXT"},
+    {"name": "evaluation_flags", "type": "TEXT"},
+    
+    {"name": "evaluation_status", "type": "VARCHAR(50)", "default": "'pending'"},
+    {"name": "error_message", "type": "TEXT"},
+    
+    {"name": "created_at", "type": "TIMESTAMP", "default": "CURRENT_TIMESTAMP"},
+    {"name": "updated_at", "type": "TIMESTAMP", "default": "CURRENT_TIMESTAMP"}
+  ]
+}
