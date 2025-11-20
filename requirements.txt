@@ -4,8 +4,11 @@ openpyxl>=3.1.0
 psycopg2-binary>=2.9.0
 python-dotenv>=1.0.0
 
-# Google Gemini
+# Google Gemini (for Evaluation)
 google-generativeai>=0.3.0
+
+# Azure OpenAI (for Classification)
+openai>=1.0.0
 
 # File processing
 python-pptx>=0.6.21

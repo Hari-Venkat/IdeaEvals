@@ -20,9 +20,15 @@ DB_CONFIG = {
     'port': int(os.getenv('DB_PORT', 5432))
 }
 
-# Gemini API
+# Gemini API (for Evaluation)
 GEMINI_API_KEY = os.getenv('GEMINI_API_KEY', '')
 GEMINI_MODEL = os.getenv('GEMINI_MODEL', 'gemini-2.5-pro')
+
+# Azure OpenAI API (for Classification)
+AZURE_OPENAI_API_KEY = os.getenv('AZURE_OPENAI_API_KEY', '')
+AZURE_OPENAI_ENDPOINT = os.getenv('AZURE_OPENAI_ENDPOINT', '')
+AZURE_OPENAI_DEPLOYMENT = os.getenv('AZURE_OPENAI_DEPLOYMENT', 'gpt-4')
+AZURE_OPENAI_API_VERSION = os.getenv('AZURE_OPENAI_API_VERSION', '2024-02-15-preview')
 
 # Processing settings
 BATCH_SIZE = int(os.getenv('BATCH_SIZE', 8))  # Number of ideas to process in parallel

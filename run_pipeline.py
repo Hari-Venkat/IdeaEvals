@@ -15,6 +15,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 
 from config.config import (
     DB_CONFIG, GEMINI_API_KEY, GEMINI_MODEL,
+    AZURE_OPENAI_API_KEY, AZURE_OPENAI_ENDPOINT, AZURE_OPENAI_DEPLOYMENT, AZURE_OPENAI_API_VERSION,
     DATA_DIR, ADDITIONAL_FILES_DIR, SCHEMA_FILE,
     BATCH_SIZE, MAX_FILE_WORKERS, LOG_FILE, LOG_LEVEL
 )
@@ -157,7 +158,13 @@ def main():
         
         # Step 5: Classify
         print("\n🎨 Step 5: Classifying themes, industries, and technologies...")
-        classifier = TCSClassifier(api_key=GEMINI_API_KEY)
+        print("   Using: Azure OpenAI")
+        classifier = TCSClassifier(
+            api_key=AZURE_OPENAI_API_KEY,
+            endpoint=AZURE_OPENAI_ENDPOINT,
+            deployment=AZURE_OPENAI_DEPLOYMENT,
+            api_version=AZURE_OPENAI_API_VERSION
+        )
         classification_pipeline = ClassificationPipeline(
             classifier=classifier,
             db_manager=db_manager,

@@ -1,13 +1,13 @@
 """
 Innovation Idea Classifier
 Classifies ideas into AI Themes, Industries, and extracts Technologies
-Uses comprehensive theme definitions for accurate classification
+Uses Azure OpenAI for classification
 """
 
 import json
 from typing import Dict, List
 from dataclasses import dataclass, asdict
-import google.generativeai as genai
+from openai import AzureOpenAI
 from classification.theme_definitions import THEME_DEFINITIONS
 
 
@@ -37,7 +37,7 @@ class TechnologyExtraction:
 # ---------- Main Class ----------
 
 class TCSClassifier:
-    """Main classifier for innovation ideas using comprehensive AI theme definitions"""
+    """Main classifier for innovation ideas using Azure OpenAI"""
    
     # AI Themes from comprehensive definitions
     AI_THEMES = list(THEME_DEFINITIONS.keys())
@@ -53,41 +53,41 @@ class TCSClassifier:
         "I8": "Technology, Software & Services (TechSS)"
     }
    
-    def __init__(self, api_key: str, model: str = "gemini-2.0-flash-exp"):
-        """Initialize classifier"""
+    def __init__(self, api_key: str, endpoint: str, deployment: str, api_version: str = "2024-02-15-preview"):
+        """Initialize Azure OpenAI classifier"""
         self.api_key = api_key
-        self.model = model
+        self.endpoint = endpoint
+        self.deployment = deployment
+        self.api_version = api_version
         self._client = None
 
     # ---------- Helper Methods ----------
 
     def _get_client(self):
-        """Lazy load Gemini client"""
+        """Lazy load Azure OpenAI client"""
         if self._client is None:
-            genai.configure(api_key=self.api_key)
-            self._client = genai.GenerativeModel(
-                model_name=self.model,
-                generation_config={
-                    "temperature": 0.3,
-                    "response_mime_type": "application/json"
-                }
+            self._client = AzureOpenAI(
+                api_key=self.api_key,
+                api_version=self.api_version,
+                azure_endpoint=self.endpoint
             )
         return self._client
 
     def _call_llm(self, system_message: str, user_message: str) -> str:
-        """Call LLM with system and user messages"""
+        """Call Azure OpenAI with system and user messages"""
         client = self._get_client()
-        combined_prompt = f"{system_message}\n\n{user_message}\n\nIMPORTANT: Return ONLY valid JSON."
-        response = client.generate_content(combined_prompt)
-        text = response.text.strip()
-
-        # Clean up markdown wrappers if LLM returns JSON inside ``` blocks
-        if text.startswith("```json"):
-            text = text.replace("```json", "").replace("```", "").strip()
-        elif text.startswith("```"):
-            text = text.replace("```", "").strip()
-
-        return text
+        
+        response = client.chat.completions.create(
+            model=self.deployment,
+            messages=[
+                {"role": "system", "content": system_message},
+                {"role": "user", "content": user_message}
+            ],
+            temperature=0.3,
+            response_format={"type": "json_object"}
+        )
+        
+        return response.choices[0].message.content.strip()
 
     def _parse_json(self, response: str) -> Dict:
         """Safely parse JSON from LLM output"""
