@@ -42,6 +42,7 @@
     {"name": "evaluation_flags", "type": "TEXT"},
     
     {"name": "evaluation_status", "type": "VARCHAR(50)", "default": "'pending'"},
+    {"name": "verification_status", "type": "VARCHAR(50)", "default": "'pending'"},
     {"name": "error_message", "type": "TEXT"},
     
     {"name": "created_at", "type": "TIMESTAMP", "default": "CURRENT_TIMESTAMP"},

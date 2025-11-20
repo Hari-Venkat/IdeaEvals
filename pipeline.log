@@ -1867,3 +1867,502 @@ LINE 10:                 FROM hackathon_ideas
       "justification": "Applying explainable AI dashboards to ADAS perception models is innovative, especially with the visualization techniques m
 2025-11-19 12:36:21,569 - evaluation.idea_evaluator - INFO - ✅ Calcucllated weighted_total: 6.92
 2025-11-19 12:36:21,576 - database.db_manager - INFO - ✓ Database connection closed
+2025-11-20 10:46:12,691 - pipeline.csv_loader - INFO - ✓ Loaded 4 rows from ideas.xlsx
+2025-11-20 10:46:12,691 - pipeline.csv_loader - INFO - ✓ Column names normalized
+2025-11-20 10:46:12,804 - database.db_manager - INFO - ✓ Database connected
+2025-11-20 10:46:12,812 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837832\Hackathon 2025.pdf
+2025-11-20 10:46:12,813 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837841\Green Coding Solution powered by Gen AI and Agentic AI.converted.pdf
+2025-11-20 10:46:12,814 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837857\Rama Narayanan_Hackathon Presentation.converted.pdf
+2025-11-20 10:46:12,816 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837865\bbc.mp4
+2025-11-20 10:46:12,817 - extraction.file_extractor - INFO -   📹 Extracting frames from video every 10 seconds...
+2025-11-20 10:46:13,008 - extraction.file_extractor - INFO -     Video: 77.6s, 30.0 FPS
+2025-11-20 10:46:13,058 - extraction.file_extractor - INFO -     Frame 1 @ 0.0s
+2025-11-20 10:46:13,517 - extraction.file_extractor - INFO -     Frame 2 @ 10.0s
+2025-11-20 10:46:13,910 - extraction.file_extractor - INFO -     Frame 3 @ 20.0s
+2025-11-20 10:46:14,221 - extraction.file_extractor - INFO -     Frame 4 @ 30.0s
+2025-11-20 10:46:14,553 - extraction.file_extractor - INFO -     Frame 5 @ 40.0s
+2025-11-20 10:46:14,920 - extraction.file_extractor - INFO -     Frame 6 @ 50.0s
+2025-11-20 10:46:15,224 - extraction.file_extractor - INFO -     Frame 7 @ 60.0s
+2025-11-20 10:46:15,462 - extraction.file_extractor - INFO -     Frame 8 @ 70.0s
+2025-11-20 10:46:15,647 - extraction.file_extractor - INFO -   ✓ Extracted 8 frames from video
+2025-11-20 10:46:18,057 - extraction.file_extractor - ERROR - ✗ Extraction failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 10:46:18,057 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837841\Green Coding Solution powered by Gen AI and Agentic AI.pptx
+2025-11-20 10:46:18,058 - extraction.file_extractor - INFO -     🔄 Converting .PPTX to PDF...
+2025-11-20 10:46:18,360 - extraction.file_extractor - ERROR - ✗ Extraction failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 10:46:18,365 - database.db_manager - INFO - ✓ Inserted idea 2837832
+2025-11-20 10:46:18,584 - extraction.file_extractor - ERROR - ✗ Extraction failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 10:46:18,584 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837857\Rama Narayanan_Hackathon Presentation.pptx
+2025-11-20 10:46:18,584 - extraction.file_extractor - INFO -     🔄 Converting .PPTX to PDF...
+2025-11-20 10:46:21,503 - extraction.file_extractor - ERROR - ✗ Extraction failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 10:46:21,505 - database.db_manager - INFO - ✓ Inserted idea 2837841
+2025-11-20 10:46:22,187 - extraction.file_extractor - ERROR - ✗ Extraction failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 10:46:22,190 - database.db_manager - INFO - ✓ Inserted idea 2837857
+2025-11-20 10:46:50,487 - extraction.file_extractor - ERROR -   ✗ Video analysis failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 10:46:50,505 - database.db_manager - INFO - ✓ Inserted idea 2837865
+2025-11-20 10:46:50,561 - database.db_manager - INFO - ✓ Database connection closed
+2025-11-20 10:56:17,383 - pipeline.csv_loader - INFO - ✓ Loaded 4 rows from ideas.xlsx
+2025-11-20 10:56:17,384 - pipeline.csv_loader - INFO - ✓ Column names normalized
+2025-11-20 10:56:17,495 - database.db_manager - INFO - ✓ Database connected
+2025-11-20 10:56:17,503 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837841\Green Coding Solution powered by Gen AI and Agentic AI.converted.pdf
+2025-11-20 10:56:17,505 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837832\Hackathon 2025.pdf
+2025-11-20 10:56:17,520 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837865\bbc.mp4
+2025-11-20 10:56:17,562 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837857\Rama Narayanan_Hackathon Presentation.converted.pdf
+2025-11-20 10:56:17,718 - extraction.file_extractor - INFO -   📹 Extracting frames from video every 10 seconds...
+2025-11-20 10:56:17,798 - extraction.file_extractor - INFO -     Video: 77.6s, 30.0 FPS
+2025-11-20 10:56:17,869 - extraction.file_extractor - INFO -     Frame 1 @ 0.0s
+2025-11-20 10:56:18,286 - extraction.file_extractor - INFO -     Frame 2 @ 10.0s
+2025-11-20 10:56:18,651 - extraction.file_extractor - INFO -     Frame 3 @ 20.0s
+2025-11-20 10:56:19,058 - extraction.file_extractor - INFO -     Frame 4 @ 30.0s
+2025-11-20 10:56:19,483 - extraction.file_extractor - INFO -     Frame 5 @ 40.0s
+2025-11-20 10:56:19,861 - extraction.file_extractor - INFO -     Frame 6 @ 50.0s
+2025-11-20 10:56:20,140 - extraction.file_extractor - INFO -     Frame 7 @ 60.0s
+2025-11-20 10:56:20,377 - extraction.file_extractor - INFO -     Frame 8 @ 70.0s
+2025-11-20 10:56:20,564 - extraction.file_extractor - INFO -   ✓ Extracted 8 frames from video
+2025-11-20 10:56:23,000 - extraction.file_extractor - ERROR - ✗ Extraction failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 10:56:23,003 - database.db_manager - INFO - ✓ Inserted idea 2837832
+2025-11-20 10:56:23,306 - extraction.file_extractor - ERROR - ✗ Extraction failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 10:56:23,352 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837841\Green Coding Solution powered by Gen AI and Agentic AI.pptx
+2025-11-20 10:56:23,353 - extraction.file_extractor - INFO -     🔄 Converting .PPTX to PDF...
+2025-11-20 10:56:23,460 - extraction.file_extractor - ERROR - ✗ Extraction failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 10:56:23,489 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837857\Rama Narayanan_Hackathon Presentation.pptx
+2025-11-20 10:56:23,490 - extraction.file_extractor - INFO -     🔄 Converting .PPTX to PDF...
+2025-11-20 10:57:36,042 - pipeline.csv_loader - INFO - ✓ Loaded 4 rows from ideas.xlsx
+2025-11-20 10:57:36,044 - pipeline.csv_loader - INFO - ✓ Column names normalized
+2025-11-20 10:57:36,140 - database.db_manager - INFO - ✓ Database connected
+2025-11-20 10:57:36,144 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837832\Hackathon 2025.pdf
+2025-11-20 10:57:36,145 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837841\Green Coding Solution powered by Gen AI and Agentic AI.converted.pdf
+2025-11-20 10:57:36,147 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837865\bbc.mp4
+2025-11-20 10:57:36,147 - extraction.file_extractor - INFO -   📹 Extracting frames from video every 10 seconds...
+2025-11-20 10:57:36,148 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837857\Rama Narayanan_Hackathon Presentation.converted.pdf
+2025-11-20 10:57:36,178 - extraction.file_extractor - INFO -     Video: 77.6s, 30.0 FPS
+2025-11-20 10:57:36,261 - extraction.file_extractor - INFO -     Frame 1 @ 0.0s
+2025-11-20 10:57:36,611 - extraction.file_extractor - INFO -     Frame 2 @ 10.0s
+2025-11-20 10:57:36,986 - extraction.file_extractor - INFO -     Frame 3 @ 20.0s
+2025-11-20 10:57:37,296 - extraction.file_extractor - INFO -     Frame 4 @ 30.0s
+2025-11-20 10:57:37,776 - extraction.file_extractor - INFO -     Frame 5 @ 40.0s
+2025-11-20 10:57:38,281 - extraction.file_extractor - INFO -     Frame 6 @ 50.0s
+2025-11-20 10:57:38,544 - extraction.file_extractor - INFO -     Frame 7 @ 60.0s
+2025-11-20 10:57:38,772 - extraction.file_extractor - INFO -     Frame 8 @ 70.0s
+2025-11-20 10:57:38,948 - extraction.file_extractor - INFO -   ✓ Extracted 8 frames from video
+2025-11-20 10:57:41,630 - extraction.file_extractor - ERROR - ✗ Extraction failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 10:57:41,631 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837857\Rama Narayanan_Hackathon Presentation.pptx
+2025-11-20 10:57:41,631 - extraction.file_extractor - INFO -     🔄 Converting .PPTX to PDF...
+2025-11-20 10:57:41,928 - extraction.file_extractor - ERROR - ✗ Extraction failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 10:57:41,929 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837841\Green Coding Solution powered by Gen AI and Agentic AI.pptx
+2025-11-20 10:57:41,929 - extraction.file_extractor - INFO -     🔄 Converting .PPTX to PDF...
+2025-11-20 10:57:41,963 - extraction.file_extractor - ERROR - ✗ Extraction failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 10:57:41,978 - database.db_manager - INFO - ✓ Inserted idea 2837832
+2025-11-20 10:57:45,548 - extraction.file_extractor - ERROR - ✗ Extraction failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 10:57:45,550 - database.db_manager - INFO - ✓ Inserted idea 2837841
+2025-11-20 10:57:45,930 - extraction.file_extractor - ERROR - ✗ Extraction failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 10:57:45,936 - database.db_manager - INFO - ✓ Inserted idea 2837857
+2025-11-20 10:58:14,811 - extraction.file_extractor - ERROR -   ✗ Video analysis failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 10:58:14,813 - database.db_manager - INFO - ✓ Inserted idea 2837865
+2025-11-20 10:58:23,595 - evaluation.idea_evaluator - INFO - Raw LLM response (first 500 chars): {
+  "scores": {
+    "clarity": {
+      "score": 6,
+      "justification": "The idea is understandable, but the summary could be more specific about the benefits and how UiPath RPA achieves them. The challenge and innovation sections help clarify the problem and proposed solution.",
+      "insufficient_info": false
+    },
+    "novelty": {
+      "score": 8,
+      "justification": "While RPA in HR is not entirely new, applying it specifically to automate reporting and analytics within SuccessFactor
+2025-11-20 10:58:23,595 - evaluation.idea_evaluator - INFO - Raw LLM response (first 500 chars): {
+  "scores": {
+    "feasibility": {
+      "score": 7,
+      "justification": "Utilizing computer vision and mobile app development is feasible with existing technologies. Edge computing can handle real-time image classification, but deployment costs and hardware requirements need consideration.",
+      "insufficient_info": false
+    },
+    "novelty": {
+      "score": 8,
+      "justification": "While waste sorting solutions exist, gamifying the process and integrating it with government waste ma
+2025-11-20 10:58:23,595 - evaluation.idea_evaluator - INFO - ✅ Calcucllated weighted_total: 6.92
+2025-11-20 10:58:23,595 - evaluation.idea_evaluator - INFO - ✅ Calcucllated weighted_total: 6.92
+2025-11-20 10:58:23,700 - evaluation.idea_evaluator - INFO - Raw LLM response (first 500 chars): {
+  "scores": {
+    "clarity": {
+      "score": 6,
+      "justification": "The idea is understandable, but the description lacks detail on the implementation and edge cases. The summary could be more precise about how the system determines time spent and handles exceptions.",
+      "insufficient_info": false
+    },
+    "novelty": {
+      "score": 8,
+      "justification": "The concept of automating timesheet filling has some novelty, especially with the integration of UX apps and notifications. 
+2025-11-20 10:58:23,701 - evaluation.idea_evaluator - INFO - ✅ Calcucllated weighted_total: 6.92
+2025-11-20 10:58:23,995 - evaluation.idea_evaluator - INFO - Raw LLM response (first 500 chars): {
+  "scores": {
+    "clarity": {
+      "score": 6,
+      "justification": "The idea is understandable, but the explanation could be more precise in detailing the dashboard's functionality and the specific types of explanations it provides. The connection between the dashboard and improved classification accuracy needs further elaboration.",
+      "insufficient_info": false
+    },
+    "novelty": {
+      "score": 8,
+      "justification": "Applying XAI dashboards to ADAS perception models to visua
+2025-11-20 10:58:23,995 - evaluation.idea_evaluator - INFO - ✅ Calcucllated weighted_total: 6.92
+2025-11-20 10:58:24,120 - database.db_manager - INFO - ✓ Database connection closed
+2025-11-20 11:30:48,991 - pipeline.csv_loader - INFO - ✓ Loaded 4 rows from ideas.xlsx
+2025-11-20 11:30:48,993 - pipeline.csv_loader - INFO - ✓ Column names normalized
+2025-11-20 11:30:49,113 - database.db_manager - INFO - ✓ Database connected
+2025-11-20 11:30:49,117 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837832\Hackathon 2025.pdf
+2025-11-20 11:30:49,118 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837841\Green Coding Solution powered by Gen AI and Agentic AI.converted.pdf
+2025-11-20 11:30:49,119 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837857\Rama Narayanan_Hackathon Presentation.converted.pdf
+2025-11-20 11:30:49,121 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837865\bbc.mp4
+2025-11-20 11:30:49,124 - extraction.file_extractor - INFO -   📹 Extracting frames from video every 10 seconds...
+2025-11-20 11:30:49,139 - extraction.file_extractor - INFO -     Video: 77.6s, 30.0 FPS
+2025-11-20 11:30:49,152 - extraction.file_extractor - INFO -     Frame 1 @ 0.0s
+2025-11-20 11:30:49,618 - extraction.file_extractor - INFO -     Frame 2 @ 10.0s
+2025-11-20 11:30:49,984 - extraction.file_extractor - INFO -     Frame 3 @ 20.0s
+2025-11-20 11:30:50,338 - extraction.file_extractor - INFO -     Frame 4 @ 30.0s
+2025-11-20 11:30:50,934 - extraction.file_extractor - INFO -     Frame 5 @ 40.0s
+2025-11-20 11:30:51,307 - extraction.file_extractor - INFO -     Frame 6 @ 50.0s
+2025-11-20 11:30:51,547 - extraction.file_extractor - INFO -     Frame 7 @ 60.0s
+2025-11-20 11:30:51,773 - extraction.file_extractor - INFO -     Frame 8 @ 70.0s
+2025-11-20 11:30:51,946 - extraction.file_extractor - INFO -   ✓ Extracted 8 frames from video
+2025-11-20 11:30:54,024 - extraction.file_extractor - ERROR - ✗ Extraction failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 11:30:54,024 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837857\Rama Narayanan_Hackathon Presentation.pptx
+2025-11-20 11:30:54,024 - extraction.file_extractor - INFO -     🔄 Converting .PPTX to PDF...
+2025-11-20 11:30:54,337 - extraction.file_extractor - ERROR - ✗ Extraction failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 11:30:54,337 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837841\Green Coding Solution powered by Gen AI and Agentic AI.pptx
+2025-11-20 11:30:54,337 - extraction.file_extractor - INFO -     🔄 Converting .PPTX to PDF...
+2025-11-20 11:30:54,745 - extraction.file_extractor - ERROR - ✗ Extraction failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 11:30:54,745 - database.db_manager - INFO - ✓ Inserted idea 2837832
+2025-11-20 11:30:58,000 - extraction.file_extractor - ERROR - ✗ Extraction failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 11:30:58,000 - database.db_manager - INFO - ✓ Inserted idea 2837841
+2025-11-20 11:30:58,390 - extraction.file_extractor - ERROR - ✗ Extraction failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 11:30:58,392 - database.db_manager - INFO - ✓ Inserted idea 2837857
+2025-11-20 11:31:26,340 - extraction.file_extractor - ERROR -   ✗ Video analysis failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 11:31:26,340 - database.db_manager - INFO - ✓ Inserted idea 2837865
+2025-11-20 11:31:26,370 - database.db_manager - INFO - ✓ Database connection closed
+2025-11-20 11:32:24,261 - pipeline.csv_loader - INFO - ✓ Loaded 4 rows from ideas.xlsx
+2025-11-20 11:32:24,262 - pipeline.csv_loader - INFO - ✓ Column names normalized
+2025-11-20 11:32:24,367 - database.db_manager - INFO - ✓ Database connected
+2025-11-20 11:32:24,370 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837832\Hackathon 2025.pdf
+2025-11-20 11:32:24,372 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837857\Rama Narayanan_Hackathon Presentation.converted.pdf
+2025-11-20 11:32:24,373 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837841\Green Coding Solution powered by Gen AI and Agentic AI.converted.pdf
+2025-11-20 11:32:24,384 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837865\bbc.mp4
+2025-11-20 11:32:24,386 - extraction.file_extractor - INFO -   📹 Extracting frames from video every 10 seconds...
+2025-11-20 11:32:24,412 - extraction.file_extractor - INFO -     Video: 77.6s, 30.0 FPS
+2025-11-20 11:32:24,449 - extraction.file_extractor - INFO -     Frame 1 @ 0.0s
+2025-11-20 11:32:24,999 - extraction.file_extractor - INFO -     Frame 2 @ 10.0s
+2025-11-20 11:32:25,311 - extraction.file_extractor - INFO -     Frame 3 @ 20.0s
+2025-11-20 11:32:25,634 - extraction.file_extractor - INFO -     Frame 4 @ 30.0s
+2025-11-20 11:32:26,038 - extraction.file_extractor - INFO -     Frame 5 @ 40.0s
+2025-11-20 11:32:26,334 - extraction.file_extractor - INFO -     Frame 6 @ 50.0s
+2025-11-20 11:32:26,557 - extraction.file_extractor - INFO -     Frame 7 @ 60.0s
+2025-11-20 11:32:26,777 - extraction.file_extractor - INFO -     Frame 8 @ 70.0s
+2025-11-20 11:32:26,960 - extraction.file_extractor - INFO -   ✓ Extracted 8 frames from video
+2025-11-20 11:32:28,714 - extraction.file_extractor - ERROR - ✗ Extraction failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 11:32:28,714 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837841\Green Coding Solution powered by Gen AI and Agentic AI.pptx
+2025-11-20 11:32:28,714 - extraction.file_extractor - INFO -     🔄 Converting .PPTX to PDF...
+2025-11-20 11:32:29,153 - extraction.file_extractor - ERROR - ✗ Extraction failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 11:32:29,155 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837857\Rama Narayanan_Hackathon Presentation.pptx
+2025-11-20 11:32:29,155 - extraction.file_extractor - INFO -     🔄 Converting .PPTX to PDF...
+2025-11-20 11:32:29,452 - extraction.file_extractor - ERROR - ✗ Extraction failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 11:32:29,458 - database.db_manager - INFO - ✓ Inserted idea 2837832
+2025-11-20 11:32:32,437 - extraction.file_extractor - ERROR - ✗ Extraction failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 11:32:32,437 - database.db_manager - INFO - ✓ Inserted idea 2837841
+2025-11-20 11:32:32,751 - extraction.file_extractor - ERROR - ✗ Extraction failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 11:32:32,753 - database.db_manager - INFO - ✓ Inserted idea 2837857
+2025-11-20 11:33:00,076 - extraction.file_extractor - ERROR -   ✗ Video analysis failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 11:33:00,076 - database.db_manager - INFO - ✓ Inserted idea 2837865
+2025-11-20 11:33:04,830 - database.db_manager - INFO - ✓ Database connection closed
+2025-11-20 11:36:43,274 - pipeline.csv_loader - INFO - ✓ Loaded 4 rows from ideas.xlsx
+2025-11-20 11:36:43,274 - pipeline.csv_loader - INFO - ✓ Column names normalized
+2025-11-20 11:36:43,380 - database.db_manager - INFO - ✓ Database connected
+2025-11-20 11:36:43,384 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837832\Hackathon 2025.pdf
+2025-11-20 11:36:43,384 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837841\Green Coding Solution powered by Gen AI and Agentic AI.converted.pdf
+2025-11-20 11:36:43,385 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837857\Rama Narayanan_Hackathon Presentation.converted.pdf
+2025-11-20 11:36:43,387 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837865\bbc.mp4
+2025-11-20 11:36:43,388 - extraction.file_extractor - INFO -   📹 Extracting frames from video every 10 seconds...
+2025-11-20 11:36:43,418 - extraction.file_extractor - INFO -     Video: 77.6s, 30.0 FPS
+2025-11-20 11:36:43,477 - extraction.file_extractor - INFO -     Frame 1 @ 0.0s
+2025-11-20 11:36:43,840 - extraction.file_extractor - INFO -     Frame 2 @ 10.0s
+2025-11-20 11:36:44,173 - extraction.file_extractor - INFO -     Frame 3 @ 20.0s
+2025-11-20 11:36:44,462 - extraction.file_extractor - INFO -     Frame 4 @ 30.0s
+2025-11-20 11:36:44,873 - extraction.file_extractor - INFO -     Frame 5 @ 40.0s
+2025-11-20 11:36:45,221 - extraction.file_extractor - INFO -     Frame 6 @ 50.0s
+2025-11-20 11:36:45,547 - extraction.file_extractor - INFO -     Frame 7 @ 60.0s
+2025-11-20 11:36:45,809 - extraction.file_extractor - INFO -     Frame 8 @ 70.0s
+2025-11-20 11:36:45,995 - extraction.file_extractor - INFO -   ✓ Extracted 8 frames from video
+2025-11-20 11:36:48,426 - extraction.file_extractor - ERROR - ✗ Extraction failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 11:36:48,426 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837841\Green Coding Solution powered by Gen AI and Agentic AI.pptx
+2025-11-20 11:36:48,426 - extraction.file_extractor - INFO -     🔄 Converting .PPTX to PDF...
+2025-11-20 11:36:48,723 - extraction.file_extractor - ERROR - ✗ Extraction failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 11:36:48,723 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837857\Rama Narayanan_Hackathon Presentation.pptx
+2025-11-20 11:36:48,724 - extraction.file_extractor - INFO -     🔄 Converting .PPTX to PDF...
+2025-11-20 11:36:48,978 - extraction.file_extractor - ERROR - ✗ Extraction failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 11:36:48,985 - database.db_manager - INFO - ✓ Inserted idea 2837832
+2025-11-20 11:36:52,092 - extraction.file_extractor - ERROR - ✗ Extraction failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 11:36:52,094 - database.db_manager - INFO - ✓ Inserted idea 2837857
+2025-11-20 11:36:52,808 - extraction.file_extractor - ERROR - ✗ Extraction failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 11:36:52,810 - database.db_manager - INFO - ✓ Inserted idea 2837841
+2025-11-20 11:37:21,216 - extraction.file_extractor - ERROR -   ✗ Video analysis failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 11:37:21,216 - database.db_manager - INFO - ✓ Inserted idea 2837865
+2025-11-20 11:37:21,216 - database.db_manager - INFO - ✓ Database connection closed
+2025-11-20 11:38:07,165 - pipeline.csv_loader - INFO - ✓ Loaded 4 rows from ideas.xlsx
+2025-11-20 11:38:07,165 - pipeline.csv_loader - INFO - ✓ Column names normalized
+2025-11-20 11:38:07,295 - database.db_manager - INFO - ✓ Database connected
+2025-11-20 11:38:07,299 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837832\Hackathon 2025.pdf
+2025-11-20 11:38:07,301 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837841\Green Coding Solution powered by Gen AI and Agentic AI.converted.pdf
+2025-11-20 11:38:07,303 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837857\Rama Narayanan_Hackathon Presentation.converted.pdf
+2025-11-20 11:38:07,304 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837865\bbc.mp4
+2025-11-20 11:38:07,306 - extraction.file_extractor - INFO -   📹 Extracting frames from video every 10 seconds...
+2025-11-20 11:38:07,338 - extraction.file_extractor - INFO -     Video: 77.6s, 30.0 FPS
+2025-11-20 11:38:07,389 - extraction.file_extractor - INFO -     Frame 1 @ 0.0s
+2025-11-20 11:38:07,716 - extraction.file_extractor - INFO -     Frame 2 @ 10.0s
+2025-11-20 11:38:07,995 - extraction.file_extractor - INFO -     Frame 3 @ 20.0s
+2025-11-20 11:38:08,318 - extraction.file_extractor - INFO -     Frame 4 @ 30.0s
+2025-11-20 11:38:08,636 - extraction.file_extractor - INFO -     Frame 5 @ 40.0s
+2025-11-20 11:38:08,946 - extraction.file_extractor - INFO -     Frame 6 @ 50.0s
+2025-11-20 11:38:09,248 - extraction.file_extractor - INFO -     Frame 7 @ 60.0s
+2025-11-20 11:38:09,528 - extraction.file_extractor - INFO -     Frame 8 @ 70.0s
+2025-11-20 11:38:09,706 - extraction.file_extractor - INFO -   ✓ Extracted 8 frames from video
+2025-11-20 11:38:12,441 - extraction.file_extractor - ERROR - ✗ Extraction failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 11:38:12,441 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837857\Rama Narayanan_Hackathon Presentation.pptx
+2025-11-20 11:38:12,441 - extraction.file_extractor - INFO -     🔄 Converting .PPTX to PDF...
+2025-11-20 11:38:12,983 - extraction.file_extractor - ERROR - ✗ Extraction failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 11:38:12,983 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837841\Green Coding Solution powered by Gen AI and Agentic AI.pptx
+2025-11-20 11:38:12,983 - extraction.file_extractor - INFO -     🔄 Converting .PPTX to PDF...
+2025-11-20 11:38:13,285 - extraction.file_extractor - ERROR - ✗ Extraction failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 11:38:13,287 - database.db_manager - INFO - ✓ Inserted idea 2837832
+2025-11-20 11:38:16,245 - extraction.file_extractor - ERROR - ✗ Extraction failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 11:38:16,247 - database.db_manager - INFO - ✓ Inserted idea 2837857
+2025-11-20 11:38:16,771 - extraction.file_extractor - ERROR - ✗ Extraction failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 11:38:16,774 - database.db_manager - INFO - ✓ Inserted idea 2837841
+2025-11-20 11:38:44,777 - extraction.file_extractor - ERROR -   ✗ Video analysis failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 11:38:44,777 - database.db_manager - INFO - ✓ Inserted idea 2837865
+2025-11-20 11:38:53,937 - evaluation.idea_evaluator - INFO - Raw LLM response (first 500 chars): {
+  "scores": {
+    "feasibility": {
+      "score": 7,
+      "justification": "UiPath RPA is well-suited for automating repetitive tasks like report generation. SuccessFactors LMS provides APIs for data extraction, making integration feasible. However, the complexity depends on the specific data requirements and the need for custom scripting.",
+      "insufficient_info": false
+    },
+    "novelty": {
+      "score": 8,
+      "justification": "While RPA in HR is not entirely new, applying it speci
+2025-11-20 11:38:53,937 - evaluation.idea_evaluator - INFO - ✅ Calcucllated weighted_total: 6.92
+2025-11-20 11:38:54,054 - evaluation.idea_evaluator - INFO - Raw LLM response (first 500 chars): {
+  "scores": {
+    "clarity": {
+      "score": 6,
+      "justification": "The idea is understandable, but the description lacks detail on how the waste sorting is actually performed and the accuracy of the system. The gamification aspect is mentioned but not elaborated upon.",
+      "insufficient_info": false
+    },
+    "novelty": {
+      "score": 8,
+      "justification": "While waste sorting using computer vision isn't entirely new, the gamification aspect and potential for widespread adoptio
+2025-11-20 11:38:54,056 - evaluation.idea_evaluator - INFO - ✅ Calcucllated weighted_total: 6.92
+2025-11-20 11:38:54,168 - evaluation.idea_evaluator - INFO - Raw LLM response (first 500 chars): {
+  "scores": {
+    "clarity": {
+      "score": 6,
+      "justification": "The idea is understandable, but the description could be more detailed regarding the specific implementation and edge cases. The summary lacks specifics on how the system handles exceptions or user overrides.",
+      "insufficient_info": false
+    },
+    "novelty": {
+      "score": 8,
+      "justification": "Automating timesheet filling, especially with the 9-hour rule, presents a novel approach to reducing administrative
+2025-11-20 11:38:54,169 - evaluation.idea_evaluator - INFO - ✅ Calcucllated weighted_total: 6.92
+2025-11-20 11:38:54,273 - evaluation.idea_evaluator - INFO - Raw LLM response (first 500 chars): {
+  "scores": {
+    "feasibility": {
+      "score": 7,
+      "justification": "The project is feasible given the availability of ADAS systems, sensor data, and XAI techniques. Implementation requires integration with existing systems and careful consideration of computational resources, but the technologies are mature.",
+      "insufficient_info": false
+    },
+    "novelty": {
+      "score": 8,
+      "justification": "The application of explainable AI dashboards to ADAS decision-making is innova
+2025-11-20 11:38:54,274 - evaluation.idea_evaluator - INFO - ✅ Calcucllated weighted_total: 6.92
+2025-11-20 11:38:54,397 - database.db_manager - INFO - ✓ Database connection closed
+2025-11-20 12:02:34,197 - pipeline.csv_loader - INFO - ✓ Loaded 4 rows from ideas.xlsx
+2025-11-20 12:02:34,197 - pipeline.csv_loader - INFO - ✓ Column names normalized
+2025-11-20 12:02:34,309 - database.db_manager - INFO - ✓ Database connected
+2025-11-20 12:02:34,313 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837832\Hackathon 2025.pdf
+2025-11-20 12:02:34,314 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837841\Green Coding Solution powered by Gen AI and Agentic AI.converted.pdf
+2025-11-20 12:02:34,315 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837857\Rama Narayanan_Hackathon Presentation.converted.pdf
+2025-11-20 12:02:34,317 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837865\bbc.mp4
+2025-11-20 12:02:34,318 - extraction.file_extractor - INFO -   📹 Extracting frames from video every 10 seconds...
+2025-11-20 12:02:34,357 - extraction.file_extractor - INFO -     Video: 77.6s, 30.0 FPS
+2025-11-20 12:02:34,392 - extraction.file_extractor - INFO -     Frame 1 @ 0.0s
+2025-11-20 12:02:34,759 - extraction.file_extractor - INFO -     Frame 2 @ 10.0s
+2025-11-20 12:02:35,170 - extraction.file_extractor - INFO -     Frame 3 @ 20.0s
+2025-11-20 12:02:35,821 - extraction.file_extractor - INFO -     Frame 4 @ 30.0s
+2025-11-20 12:02:36,340 - extraction.file_extractor - INFO -     Frame 5 @ 40.0s
+2025-11-20 12:02:36,691 - extraction.file_extractor - INFO -     Frame 6 @ 50.0s
+2025-11-20 12:02:36,949 - extraction.file_extractor - INFO -     Frame 7 @ 60.0s
+2025-11-20 12:02:37,282 - extraction.file_extractor - INFO -     Frame 8 @ 70.0s
+2025-11-20 12:02:37,456 - extraction.file_extractor - INFO -   ✓ Extracted 8 frames from video
+2025-11-20 12:02:39,549 - extraction.file_extractor - ERROR - ✗ Extraction failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 12:02:39,563 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837857\Rama Narayanan_Hackathon Presentation.pptx
+2025-11-20 12:02:39,563 - extraction.file_extractor - INFO -     🔄 Converting .PPTX to PDF...
+2025-11-20 12:02:39,644 - extraction.file_extractor - ERROR - ✗ Extraction failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 12:02:39,644 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837841\Green Coding Solution powered by Gen AI and Agentic AI.pptx
+2025-11-20 12:02:39,644 - extraction.file_extractor - INFO -     🔄 Converting .PPTX to PDF...
+2025-11-20 12:02:40,040 - extraction.file_extractor - ERROR - ✗ Extraction failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 12:02:40,046 - database.db_manager - INFO - ✓ Inserted idea 2837832
+2025-11-20 12:02:43,505 - extraction.file_extractor - ERROR - ✗ Extraction failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 12:02:43,507 - database.db_manager - INFO - ✓ Inserted idea 2837841
+2025-11-20 12:02:43,759 - extraction.file_extractor - ERROR - ✗ Extraction failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 12:02:43,759 - database.db_manager - INFO - ✓ Inserted idea 2837857
+2025-11-20 12:03:12,309 - extraction.file_extractor - ERROR -   ✗ Video analysis failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 12:03:12,309 - database.db_manager - INFO - ✓ Inserted idea 2837865
+2025-11-20 12:03:20,620 - evaluation.idea_evaluator - INFO - Raw LLM response (first 500 chars): {
+  "scores": {
+    "feasibility": {
+      "score": 7,
+      "justification": "The idea is feasible given the availability of XAI tools and data visualization techniques. Integrating these into existing ADAS systems requires careful planning and execution, but it's achievable.",
+      "insufficient_info": false
+    },
+    "novelty": {
+      "score": 8,
+      "justification": "The application of explainable AI dashboards to ADAS decision-making is innovative. While XAI is gaining traction, its sp
+2025-11-20 12:03:20,620 - evaluation.idea_evaluator - INFO - ✅ Calcucllated weighted_total: 6.94
+2025-11-20 12:03:20,723 - evaluation.idea_evaluator - INFO - Raw LLM response (first 500 chars): {
+  "scores": {
+    "clarity": {
+      "score": 6,
+      "justification": "The idea is understandable, but the description lacks detail on how the system determines work hours and handles exceptions. The process for employee agreement and handling allocation changes needs more clarification.",
+      "insufficient_info": false
+    },
+    "novelty": {
+      "score": 8,
+      "justification": "Automating timesheet filling, especially with conditional logic based on hours worked, presents a novel ap
+2025-11-20 12:03:20,724 - evaluation.idea_evaluator - INFO - ✅ Calcucllated weighted_total: 6.92
+2025-11-20 12:03:20,825 - evaluation.idea_evaluator - INFO - Raw LLM response (first 500 chars): {
+  "scores": {
+    "clarity": {
+      "score": 6,
+      "justification": "The idea is understandable, but the description could be more detailed regarding the specific implementation and target users. The game aspect is a good addition but needs further elaboration.",
+      "insufficient_info": false
+    },
+    "novelty": {
+      "score": 8,
+      "justification": "While waste sorting solutions exist, the combination of a game-like interface with edge AI for real-time classification offers a de
+2025-11-20 12:03:20,825 - evaluation.idea_evaluator - INFO - ✅ Calcucllated weighted_total: 6.92
+2025-11-20 12:03:21,134 - evaluation.idea_evaluator - INFO - Raw LLM response (first 500 chars): {
+  "scores": {
+    "clarity": {
+      "score": 7,
+      "justification": "The idea is clearly presented and easy to understand. The problem and proposed solution are well-defined, although more detail on the specific data points and analysis would improve clarity.",
+      "insufficient_info": false
+    },
+    "novelty": {
+      "score": 7,
+      "justification": "While RPA in HR is not entirely new, applying it specifically to SuccessFactors LMS reporting and analytics has some novelty. The ext
+2025-11-20 12:03:21,134 - evaluation.idea_evaluator - INFO - ✅ Calcucllated weighted_total: 6.95
+2025-11-20 12:03:21,249 - database.db_manager - INFO - ✓ Database connection closed
+2025-11-20 12:55:00,726 - pipeline.csv_loader - INFO - ✓ Loaded 4 rows from ideas.xlsx
+2025-11-20 12:55:00,728 - pipeline.csv_loader - INFO - ✓ Column names normalized
+2025-11-20 12:55:00,856 - database.db_manager - INFO - ✓ Database connected
+2025-11-20 12:55:00,860 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837832\Hackathon 2025.pdf
+2025-11-20 12:55:00,861 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837841\Green Coding Solution powered by Gen AI and Agentic AI.converted.pdf
+2025-11-20 12:55:00,863 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837857\Rama Narayanan_Hackathon Presentation.converted.pdf
+2025-11-20 12:55:00,865 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837865\bbc.mp4
+2025-11-20 12:55:00,865 - extraction.file_extractor - INFO -   📹 Extracting frames from video every 10 seconds...
+2025-11-20 12:55:00,890 - extraction.file_extractor - INFO -     Video: 77.6s, 30.0 FPS
+2025-11-20 12:55:00,915 - extraction.file_extractor - INFO -     Frame 1 @ 0.0s
+2025-11-20 12:55:01,243 - extraction.file_extractor - INFO -     Frame 2 @ 10.0s
+2025-11-20 12:55:01,591 - extraction.file_extractor - INFO -     Frame 3 @ 20.0s
+2025-11-20 12:55:01,925 - extraction.file_extractor - INFO -     Frame 4 @ 30.0s
+2025-11-20 12:55:02,247 - extraction.file_extractor - INFO -     Frame 5 @ 40.0s
+2025-11-20 12:55:02,569 - extraction.file_extractor - INFO -     Frame 6 @ 50.0s
+2025-11-20 12:55:02,956 - extraction.file_extractor - INFO -     Frame 7 @ 60.0s
+2025-11-20 12:55:03,196 - extraction.file_extractor - INFO -     Frame 8 @ 70.0s
+2025-11-20 12:55:03,378 - extraction.file_extractor - INFO -   ✓ Extracted 8 frames from video
+2025-11-20 12:55:05,860 - extraction.file_extractor - ERROR - ✗ Extraction failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 12:55:05,876 - database.db_manager - INFO - ✓ Inserted idea 2837832
+2025-11-20 12:55:06,323 - extraction.file_extractor - ERROR - ✗ Extraction failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 12:55:06,323 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837841\Green Coding Solution powered by Gen AI and Agentic AI.pptx
+2025-11-20 12:55:06,323 - extraction.file_extractor - INFO -     🔄 Converting .PPTX to PDF...
+2025-11-20 12:55:06,618 - extraction.file_extractor - ERROR - ✗ Extraction failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 12:55:06,618 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837857\Rama Narayanan_Hackathon Presentation.pptx
+2025-11-20 12:55:06,618 - extraction.file_extractor - INFO -     🔄 Converting .PPTX to PDF...
+2025-11-20 12:55:10,045 - extraction.file_extractor - ERROR - ✗ Extraction failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 12:55:10,045 - database.db_manager - INFO - ✓ Inserted idea 2837841
+2025-11-20 12:55:11,059 - extraction.file_extractor - ERROR - ✗ Extraction failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 12:55:11,059 - database.db_manager - INFO - ✓ Inserted idea 2837857
+2025-11-20 12:55:38,274 - extraction.file_extractor - ERROR -   ✗ Video analysis failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 12:55:38,274 - database.db_manager - INFO - ✓ Inserted idea 2837865
+2025-11-20 12:55:38,304 - database.db_manager - INFO - ✓ Database connection closed
+2025-11-20 12:56:16,901 - pipeline.csv_loader - INFO - ✓ Loaded 4 rows from ideas.xlsx
+2025-11-20 12:56:16,901 - pipeline.csv_loader - INFO - ✓ Column names normalized
+2025-11-20 12:56:17,019 - database.db_manager - INFO - ✓ Database connected
+2025-11-20 12:56:17,023 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837832\Hackathon 2025.pdf
+2025-11-20 12:56:17,025 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837841\Green Coding Solution powered by Gen AI and Agentic AI.converted.pdf
+2025-11-20 12:56:17,026 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837857\Rama Narayanan_Hackathon Presentation.converted.pdf
+2025-11-20 12:56:17,028 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837865\bbc.mp4
+2025-11-20 12:56:17,030 - extraction.file_extractor - INFO -   📹 Extracting frames from video every 10 seconds...
+2025-11-20 12:56:17,054 - extraction.file_extractor - INFO -     Video: 77.6s, 30.0 FPS
+2025-11-20 12:56:17,091 - extraction.file_extractor - INFO -     Frame 1 @ 0.0s
+2025-11-20 12:56:17,460 - extraction.file_extractor - INFO -     Frame 2 @ 10.0s
+2025-11-20 12:56:17,803 - extraction.file_extractor - INFO -     Frame 3 @ 20.0s
+2025-11-20 12:56:18,147 - extraction.file_extractor - INFO -     Frame 4 @ 30.0s
+2025-11-20 12:56:18,513 - extraction.file_extractor - INFO -     Frame 5 @ 40.0s
+2025-11-20 12:56:18,874 - extraction.file_extractor - INFO -     Frame 6 @ 50.0s
+2025-11-20 12:56:19,226 - extraction.file_extractor - INFO -     Frame 7 @ 60.0s
+2025-11-20 12:56:19,456 - extraction.file_extractor - INFO -     Frame 8 @ 70.0s
+2025-11-20 12:56:19,630 - extraction.file_extractor - INFO -   ✓ Extracted 8 frames from video
+2025-11-20 12:56:22,024 - extraction.file_extractor - ERROR - ✗ Extraction failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 12:56:22,040 - database.db_manager - INFO - ✓ Inserted idea 2837832
+2025-11-20 12:56:22,403 - extraction.file_extractor - ERROR - ✗ Extraction failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 12:56:22,403 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837857\Rama Narayanan_Hackathon Presentation.pptx
+2025-11-20 12:56:22,403 - extraction.file_extractor - INFO -     🔄 Converting .PPTX to PDF...
+2025-11-20 12:56:22,715 - extraction.file_extractor - ERROR - ✗ Extraction failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 12:56:22,715 - extraction.file_extractor - INFO - Extracting file: C:\Users\HariharanV\Documents\workspace\myapps\HackathonEvaluation2\data\additional_files\2837841\Green Coding Solution powered by Gen AI and Agentic AI.pptx
+2025-11-20 12:56:22,715 - extraction.file_extractor - INFO -     🔄 Converting .PPTX to PDF...
+2025-11-20 12:56:25,809 - extraction.file_extractor - ERROR - ✗ Extraction failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 12:56:25,809 - database.db_manager - INFO - ✓ Inserted idea 2837857
+2025-11-20 12:56:26,321 - extraction.file_extractor - ERROR - ✗ Extraction failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 12:56:26,337 - database.db_manager - INFO - ✓ Inserted idea 2837841
+2025-11-20 12:56:53,482 - extraction.file_extractor - ERROR -   ✗ Video analysis failed: 403 Your API key was reported as leaked. Please use another API key.
+2025-11-20 12:56:53,482 - database.db_manager - INFO - ✓ Inserted idea 2837865
+2025-11-20 12:57:02,371 - evaluation.idea_evaluator - INFO - Raw LLM response (first 500 chars): {
+  "scores": {
+    "clarity": {
+      "score": 6,
+      "justification": "The idea is understandable, but the description lacks detail on the specific implementation and user interface. The game aspect is mentioned but not elaborated upon.",
+      "insufficient_info": false
+    },
+    "novelty": {
+      "score": 8,
+      "justification": "While waste sorting solutions exist, the combination of a game-like interface and edge AI for real-time classification adds a layer of innovation. The potenti
+2025-11-20 12:57:02,371 - evaluation.idea_evaluator - INFO - ✅ Calcucllated weighted_total: 6.92
+2025-11-20 12:57:02,902 - evaluation.idea_evaluator - INFO - Raw LLM response (first 500 chars): {
+  "scores": {
+    "feasibility": {
+      "score": 7,
+      "justification": "Building AI dashboards is feasible with existing technologies like Python, visualization tools, and cloud platforms. Integrating with ADAS systems requires careful data ingestion and processing, but is achievable.",
+      "insufficient_info": false
+    },
+    "novelty": {
+      "score": 8,
+      "justification": "While explainable AI is gaining traction, applying it specifically to ADAS perception models with detailed
+2025-11-20 12:57:02,902 - evaluation.idea_evaluator - INFO - ✅ Calcucllated weighted_total: 6.94
+2025-11-20 12:57:03,198 - evaluation.idea_evaluator - INFO - Raw LLM response (first 500 chars): {
+  "scores": {
+    "feasibility": {
+      "score": 7,
+      "justification": "The idea is technically feasible, leveraging existing UX apps, notification systems, and time tracking systems. API integration and cloud platforms are readily available, but careful planning is needed to ensure seamless integration and data accuracy.",
+      "insufficient_info": false
+    },
+    "novelty": {
+      "score": 8,
+      "justification": "Automating timesheet filling, especially based on time spent in the 
+2025-11-20 12:57:03,198 - evaluation.idea_evaluator - INFO - ✅ Calcucllated weighted_total: 6.92
+2025-11-20 12:57:03,622 - evaluation.idea_evaluator - INFO - Raw LLM response (first 500 chars): {
+  "scores": {
+    "feasibility": {
+      "score": 7,
+      "justification": "UiPath RPA is well-suited for automating data extraction and report generation from systems like SuccessFactors LMS. The technologies listed are commonly used and readily available, making implementation relatively straightforward. However, integration complexity and data security considerations need careful planning.",
+      "insufficient_info": false
+    },
+    "novelty": {
+      "score": 8,
+      "justification": "
+2025-11-20 12:57:03,622 - evaluation.idea_evaluator - INFO - ✅ Calcucllated weighted_total: 6.92
+2025-11-20 12:57:03,747 - database.db_manager - INFO - ✓ Database connection closed

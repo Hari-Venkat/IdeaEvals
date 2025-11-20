@@ -1,354 +1,308 @@
-# Evaluation Verification Suite
+# Evaluation Verification
 
-Comprehensive verification system to ensure the evaluation process is accurate, consistent, and trustworthy.
+Automatic verification that runs after evaluation to ensure quality and consistency.
 
 ## Overview
 
-This verification suite tests the evaluation process against 8 critical criteria:
+Verification automatically checks completed evaluations against 4 criteria:
 
-1. **Rubric Compliance** - LLM follows rubrics correctly
-2. **Weighted Score Calculation** - Calculations are mathematically accurate
-3. **JSON Validity** - Output is valid and complete JSON
-4. **No Hallucination** - No score leakage or fabricated information
-5. **Consistency** - Same idea produces consistent results
+1. **Rubric Compliance** - All rubric criteria are scored
+2. **JSON Validity** - All evaluation data is valid and complete
+3. **No Hallucination** - Scores appropriately reflect available information
+4. **Consistency** - Score distribution is reasonable
+
+The verification runs **automatically in Step 7** after evaluation completes.
 
 
 
-### `test_evaluation_verification.py`
-Main verification test suite that runs all 8 tests.
+### Files
 
-**Usage:**
+- `post_evaluation_verifier.py` - Main verification module
+- `README.md` - This documentation
+
+## Usage
+
+### Automatic (Recommended)
 ```bash
-python verification/test_evaluation_verification.py
+python run_pipeline.py
 ```
+Verification runs automatically as Step 7 after evaluation.
 
-**Output:**
-- Detailed test results for each criterion
-- Pass/fail status for each test
-- Summary with pass rate
-
-### `generate_verification_report.py`
-Generates a comprehensive markdown report with:
-- Rubrics configuration
-- Sample evaluations
-- Weighted score verification
-- Consistency analysis
-- Edge case testing
-- Recommendations
-
-**Usage:**
+### Manual
 ```bash
-python verification/generate_verification_report.py
+python verification/post_evaluation_verifier.py
 ```
+Run verification anytime on existing evaluations.
 
-**Output:**
-- Creates `verification/VERIFICATION_REPORT.md`
-- Detailed analysis and recommendations
+## Verification Checks
 
-## Prerequisites
+### Check 1: Rubric Compliance
+**What it checks:**
+- All rubric criteria are present in each evaluation
+- No missing criteria across all completed evaluations
 
-1. **Database Setup**
-   ```bash
-   python database/setup_rubrics.py
-   ```
+**Pass criteria:**
+- Every evaluation has all expected rubric criteria scored
 
-2. **API Key**
-   - Ensure `GEMINI_API_KEY` is configured in `config/config.py`
-
-3. **Dependencies**
-   - All standard project dependencies installed
-
-## Running Verification
-
-### Quick Verification
-```bash
-# Run all tests
-python verification/test_evaluation_verification.py
+**Example output:**
 ```
-
-### Detailed Report
-```bash
-# Generate comprehensive report
-python verification/generate_verification_report.py
-
-# View report
-cat verification/VERIFICATION_REPORT.md
-```
-
-## Test Details
-
-### Test 1: Rubric Compliance
-**Purpose**: Verify LLM scores all rubric criteria
-
-**Checks**:
-- All criteria from rubrics are present in output
-- Each criterion has a score
-- No missing criteria
-
-**Pass Criteria**: All rubric criteria scored
-
----
-
-### Test 2: Weighted Score Calculation
-**Purpose**: Verify mathematical accuracy of weighted totals
-
-**Checks**:
-- Manual calculation vs LLM calculation
-- Floating point precision
-- Formula correctness
-
-**Pass Criteria**: Difference < 0.01
-
-**Example**:
-```
-novelty:      0.30 × 8 = 2.40
-clarity:      0.34 × 7 = 2.38
-feasibility:  0.15 × 6 = 0.90
------------------------------------
-Manual Total:         5.68
-LLM Total:           5.68
-Difference:          0.00
+✅ All evaluations have complete rubric criteria
+   Expected criteria: clarity, novelty, evidence, feasibility, long_term_value, security_compliance
 ```
 
 ---
 
-### Test 3: JSON Validity
-**Purpose**: Ensure output is valid, parseable JSON
+### Check 2: JSON Validity
+**What it checks:**
+- All evaluation data is valid JSON
+- Required fields are present and not null
+- Data types are correct
 
-**Checks**:
-- Valid JSON syntax
-- All required fields present
-- Proper data types
-- Serializable
+**Pass criteria:**
+- All evaluations have valid JSON structure
+- No null values in required fields
 
-**Pass Criteria**: Valid JSON with all required fields
-
-**Required Fields**:
-- `scores` (object)
-- `weighted_total` (number)
+**Required fields:**
+- `evaluation_scores` (JSON object)
+- `weighted_total_score` (number)
 - `investment_recommendation` (string)
 - `key_strengths` (array)
 - `key_concerns` (array)
 
----
-
-### Test 4: No Hallucination
-**Purpose**: Detect fabricated scores or information
-
-**Checks**:
-- Scores appropriate for information provided
-- No overconfident scoring with minimal data
-- Justifications reflect actual content
-- `insufficient_info` flag used appropriately
-
-**Pass Criteria**: Appropriate scoring for information quality
-
-**Hallucination Indicators**:
-- High scores (>7) with minimal information
-- Confident justifications without supporting data
-- Missing `insufficient_info` flags
-
----
-
-### Test 5: Consistency
-**Purpose**: Verify reproducible results
-
-**Checks**:
-- Run evaluation 3 times on same idea
-- Compare weighted totals
-- Calculate variance
-
-**Pass Criteria**: Variance < 1.0 point
-
-**Acceptable Ranges**:
-- Excellent: variance < 0.5
-- Good: variance < 1.0
-- Acceptable: variance < 2.0
-- Concern: variance ≥ 2.0
-
----
-
-### Test 6: Score Ranges
-**Purpose**: Validate scores are within bounds
-
-**Checks**:
-- Individual scores: 1-10
-- Weighted total: 0-10
-- No negative scores
-- No scores > 10
-
-**Pass Criteria**: All scores within valid ranges
-
----
-
-### Test 7: Required Fields
-**Purpose**: Ensure completeness of evaluation
-
-**Checks**:
-- Each criterion has: score, justification, insufficient_info
-- Top-level fields present
-- Arrays not empty
-- Proper structure
-
-**Pass Criteria**: All required fields present and populated
-
-**Required per Criterion**:
-```json
-{
-  "score": 7,
-  "justification": "Explanation...",
-  "insufficient_info": false
-}
+**Example output:**
+```
+✅ All evaluations have valid JSON structure
+   Required fields: scores, weighted_total, recommendation, strengths, concerns
 ```
 
 ---
 
-### Test 8: Investment Recommendation
-**Purpose**: Verify recommendation logic
+### Check 3: No Hallucination
+**What it checks:**
+- Ideas with minimal information don't have suspiciously high scores
+- Scores reflect the quality and quantity of available information
+- `insufficient_info` flag is used appropriately
 
-**Checks**:
-- Valid recommendation value
-- Alignment with weighted total
-- Logical consistency
+**Pass criteria:**
+- No high scores (>7) for ideas with minimal information
+- Or `insufficient_info` flag is set when appropriate
 
-**Pass Criteria**: Recommendation aligns with score
+**Example output:**
+```
+✅ No obvious hallucination detected
+   Scores appropriately reflect available information
+```
 
-**Expected Logic**:
-- Score ≥ 7.5 → "go"
-- Score 5.0-7.5 → "consider-with-mitigations"
-- Score < 5.0 → "no-go"
+---
+
+### Check 4: Consistency
+**What it checks:**
+- Score distribution across all evaluations
+- Scores are neither too similar nor too different
+- Reasonable spread indicates proper discrimination
+
+**Pass criteria:**
+- Score range between 0.5 and 9.0
+- Reasonable distribution
+
+**Example output:**
+```
+✅ Score distribution looks reasonable
+   Average: 6.94
+   Range: 6.66 - 7.50
+   Spread: 0.84
+```
+
+---
 
 ## Interpreting Results
 
-### All Tests Pass ✅
+### All Checks Pass ✅
 ```
-📈 Results: 8/8 tests passed (100.0%)
-✅ All verification tests passed!
+Evaluated Ideas: 4
+Verification Checks: 4/4 passed (100%)
+
+🎉 All verification checks passed!
+✅ Evaluation quality is good!
 ```
-**Action**: Evaluation system is production-ready
+**Meaning**: All evaluations are high quality and ready to use
 
-### Some Tests Fail ⚠️
+**Action**: Proceed with confidence
+
+---
+
+### 3/4 Checks Pass ✅
 ```
-📈 Results: 6/8 tests passed (75.0%)
-⚠️ 2 test(s) failed - review details above
+Evaluated Ideas: 4
+Verification Checks: 3/4 passed (75%)
+
+✅ 3/4 checks passed - Evaluation quality is acceptable
+⚠️  2 warnings detected
 ```
-**Action**: Review failed tests and fix issues before production
+**Meaning**: Evaluations are acceptable with minor issues
 
-### Common Issues
+**Action**: Review warnings but generally safe to proceed
 
-#### Weighted Score Mismatch
-**Cause**: LLM calculation error or floating point precision
-**Fix**: Server-side recalculation (already implemented)
+---
 
-#### Consistency Issues
-**Cause**: High temperature or ambiguous prompts
-**Fix**: Lower temperature (currently 0.2) or refine prompts
+### 2/4 Checks Pass ⚠️
+```
+Evaluated Ideas: 4
+Verification Checks: 2/4 passed (50%)
 
-#### Hallucination
-**Cause**: Insufficient information handling
-**Fix**: Improve prompt to emphasize `insufficient_info` flag
+❌ Only 2/4 checks passed - Review evaluation quality
+```
+**Meaning**: Significant quality issues detected
+
+**Action**: Review failed checks and consider re-evaluation
+
+---
+
+### Less Than 2 Checks Pass ❌
+```
+Evaluated Ideas: 4
+Verification Checks: 1/4 passed (25%)
+
+❌ Only 1/4 checks passed - Review evaluation quality
+```
+**Meaning**: Major quality problems
+
+**Action**: Do not use evaluations - investigate and fix issues
+
+### Common Issues and Solutions
+
+#### Missing Rubric Criteria
+**Symptom**: Some evaluations missing certain criteria
+**Cause**: LLM skipped criteria or database update failed
+**Solution**: Re-run evaluation for affected ideas
 
 #### Invalid JSON
-**Cause**: LLM output formatting issues
-**Fix**: Improve prompt with explicit JSON schema
+**Symptom**: JSON parsing errors in evaluation data
+**Cause**: LLM output formatting issues or database corruption
+**Solution**: Check evaluation_scores field, re-evaluate if needed
+
+#### Hallucination Warnings
+**Symptom**: High scores for ideas with minimal information
+**Cause**: LLM being too generous or not using insufficient_info flag
+**Solution**: Review prompt to emphasize conservative scoring for limited data
+
+#### Narrow Score Range
+**Symptom**: All scores very similar (range < 0.5)
+**Cause**: Lack of discrimination between ideas
+**Solution**: Review rubric weights and evaluation criteria
+
+#### Wide Score Range
+**Symptom**: Scores too spread out (range > 9.0)
+**Cause**: Inconsistent evaluation standards
+**Solution**: Review evaluation consistency, check for outliers
 
 ## Best Practices
 
-### Before Production
-1. ✅ Run full verification suite
-2. ✅ Generate and review verification report
-3. ✅ Test with real data samples
-4. ✅ Validate rubrics with stakeholders
+### Running Evaluations
+1. Always run the full pipeline with `python run_pipeline.py`
+2. Verification runs automatically after evaluation
+3. Review verification output before using results
+4. Address any warnings or failures immediately
 
-### During Production
-1. ✅ Monitor evaluation consistency
-2. ✅ Log all evaluations for audit
-3. ✅ Periodic verification runs
-4. ✅ Review edge cases
+### Monitoring Quality
+1. Check verification results after each pipeline run
+2. Track pass rates over time
+3. Investigate any sudden changes in verification results
+4. Keep logs of verification warnings
 
 ### After Changes
-1. ✅ Re-run verification after rubric changes
-2. ✅ Re-run after prompt modifications
-3. ✅ Re-run after model updates
-4. ✅ Compare before/after results
+1. Re-run pipeline after rubric changes
+2. Re-run after prompt modifications
+3. Compare verification results before/after changes
+4. Ensure all checks still pass
 
 ## Troubleshooting
 
-### Test Failures
-
-**Rubric Compliance Failure**
+### No Evaluations Found
 ```
-❌ FAIL - Rubric Compliance
-Missing criteria: ['security_compliance']
+⚠️  No completed evaluations found. Skipping verification.
 ```
-**Solution**: Check rubrics in database match evaluation output
+**Solution**: Run evaluations first with `python run_pipeline.py`
 
-**Weighted Score Failure**
+### Missing Criteria
 ```
-❌ FAIL - Weighted Score Calculation
-Mismatch: Manual=7.2, LLM=7.5
+❌ 2 evaluations have missing criteria
 ```
-**Solution**: Already handled by server-side recalculation
+**Solution**: 
+1. Check which ideas are affected in warnings
+2. Re-run evaluation for those specific ideas
+3. Verify rubrics table has correct criteria
 
-**Consistency Failure**
+### Invalid JSON
 ```
-❌ FAIL - Consistency
-High variance detected (max diff: 2.3)
+❌ 1 evaluations have invalid JSON
 ```
-**Solution**: Lower temperature or refine prompts
+**Solution**:
+1. Check the evaluation_scores field in database
+2. Look for malformed JSON
+3. Re-evaluate the affected idea
 
-### Database Issues
-
-**No Rubrics Found**
+### Database Connection Error
 ```
-❌ No active rubrics found in database
+❌ Error: connection refused
 ```
-**Solution**: Run `python database/setup_rubrics.py`
+**Solution**: 
+1. Ensure PostgreSQL is running
+2. Check DB_CONFIG in config/config.py
+3. Verify database exists
 
-**Connection Error**
+## Example Output
+
+Here's what you'll see when verification runs:
+
 ```
-❌ Error fetching rubrics: connection refused
+================================================================================
+🔍 POST-EVALUATION VERIFICATION
+================================================================================
+
+📊 Found 4 completed evaluations
+
+================================================================================
+CHECK 1: Rubric Compliance
+================================================================================
+
+✅ All evaluations have complete rubric criteria
+   Expected criteria: clarity, novelty, evidence, feasibility, long_term_value, security_compliance
+
+================================================================================
+CHECK 2: JSON Validity
+================================================================================
+
+✅ All evaluations have valid JSON structure
+   Required fields: scores, weighted_total, recommendation, strengths, concerns
+
+================================================================================
+CHECK 3: No Hallucination
+================================================================================
+
+✅ No obvious hallucination detected
+   Scores appropriately reflect available information
+
+================================================================================
+CHECK 4: Consistency
+================================================================================
+
+✅ Score distribution looks reasonable
+   Average: 6.94
+   Range: 6.66 - 7.50
+   Spread: 0.84
+
+================================================================================
+📊 VERIFICATION SUMMARY
+================================================================================
+
+Evaluated Ideas: 4
+Verification Checks: 4/4 passed (100%)
+
+🎉 All verification checks passed!
+✅ Evaluation quality is good!
+
+================================================================================
 ```
-**Solution**: Check PostgreSQL is running and DB_CONFIG is correct
 
-## Continuous Monitoring
 
-### Automated Verification
-Add to CI/CD pipeline:
-```bash
-# In your CI/CD script
-python verification/test_evaluation_verification.py
-if [ $? -ne 0 ]; then
-    echo "Verification failed!"
-    exit 1
-fi
-```
-
-### Periodic Checks
-Schedule regular verification:
-```bash
-# Weekly verification
-0 0 * * 0 cd /path/to/project && python verification/test_evaluation_verification.py
-```
-
-### Metrics to Track
-- Pass rate over time
-- Consistency variance trends
-- Average weighted scores
-- Hallucination incidents
-- JSON parsing failures
-
-## Support
-
-For issues or questions:
-1. Check test output details
-2. Review VERIFICATION_REPORT.md
-3. Check logs in `logs/` directory
-4. Review rubrics configuration
-
-## Version History
-
-- **v1.0** - Initial verification suite
-  - 8 core verification tests
-  - Report generation
-  - Comprehensive documentation

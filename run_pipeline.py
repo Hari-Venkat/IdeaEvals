@@ -27,6 +27,7 @@ from classification.tcs_classifier import TCSClassifier
 from pipeline.classification_pipeline import ClassificationPipeline
 from evaluation.idea_evaluator import IdeaEvaluator
 from pipeline.evaluation_pipeline import EvaluationPipeline
+from verification.post_evaluation_verifier import PostEvaluationVerifier
 
 # Logging setup
 logging.basicConfig(
@@ -194,6 +195,33 @@ def main():
         print(f"  Total evaluated: {evaluation_stats['total']}")
         print(f"  ✓ Completed: {evaluation_stats['completed']}")
         print(f"  ✗ Failed: {evaluation_stats['failed']}")
+        
+        # Step 7: Verify evaluation quality with retry
+        if evaluation_stats['completed'] > 0:
+            print("\n🔍 Step 7: Verifying evaluation quality...")
+            
+            max_retries = 3
+            retry_count = 0
+            verification_success = False
+            
+            while retry_count < max_retries and not verification_success:
+                if retry_count > 0:
+                    print(f"\n🔄 Retry attempt {retry_count}/{max_retries}...")
+                
+                verifier = PostEvaluationVerifier(DB_CONFIG)
+                verifier.verify_all()
+                
+                # Check if verification passed
+                if verifier.failed == 0:
+                    verification_success = True
+                    print("\n✅ Verification completed successfully!")
+                else:
+                    retry_count += 1
+                    if retry_count < max_retries:
+                        print(f"\n⚠️  Verification failed. Retrying... ({retry_count}/{max_retries})")
+                    else:
+                        print(f"\n❌ Verification failed after {max_retries} attempts.")
+                        print("   Review the issues above before using evaluation results.")
         
         print("\n✅ Pipeline completed successfully!")
         print(f"📍 Database: {DB_CONFIG['database']}")

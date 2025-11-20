@@ -1,0 +1,38 @@
+# Environment variables
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+pipeline.log
+
+# Data
+data/additional_files/
+*.xlsx
+*.csv
+
+# Database
+*.db
+*.sqlite
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Verification reports
+verification/VERIFICATION_REPORT.md
